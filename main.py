@@ -43,4 +43,4 @@ async def porcentagem(a: float, b: float):
 @app.get("/potenciacao/{a}/{b}")
 async def potenciacao(a: int, b: int):
     resultado = a ** b
-    return {"Operação": "potenciacao", "a": a, "b": b, "resultado": resultado}
+    return {"Operação": "potência", "a": a, "b": b, "resultado": resultado}
