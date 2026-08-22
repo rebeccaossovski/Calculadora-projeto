@@ -36,4 +36,4 @@ async def numero_aleatorio():
 @app.get("/porcentagem/{a}/{b}")
 async def porcentagem(a: float, b: float):
     resultado = (a * b) / 100
-    return {"Operação": "porcentagem", "a": a, "b": b, "resultado": resultado}
+    return {"Operação": "percentual", "a": a, "b": b, "resultado": resultado}
