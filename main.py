@@ -39,3 +39,8 @@ async def porcentagem(a: float, b: float):
         return {"erro": "Os valores devem ser positivos"}
     resultado = (a * b) / 100
     return {"Operação": "percentual", "a": a, "b": b, "resultado": resultado}
+
+@app.get("/potenciacao/{a}/{b}")
+async def potenciacao(a: int, b: int):
+    resultado = a ** b
+    return {"Operação": "potenciacao", "a": a, "b": b, "resultado": resultado}
