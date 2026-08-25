@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   deliver:
     runs-on: ubuntu-latest
@@ -16,5 +19,14 @@ jobs:
         with:
           name: calculadoraprojeto.zip
           path: |
-            '**.py'
+            **.py
             README.md
+  deploy:
+    runs-on: ubuntu-latest
+    needs: deliver
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: calculadoraprojeto.zip
+      - name: Display structure of downloaded files
+        run: ls -R
