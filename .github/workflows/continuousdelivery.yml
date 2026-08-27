@@ -14,7 +14,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
 
-      - name: Continious Delivery
+      - name: Continuous Delivery
         uses: actions/upload-artifact@v7
         with:
           name: calculadoraprojeto.zip
@@ -34,9 +34,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
       -
-        # Add support for more platforms with QEMU (optional)
-        # https://github.com/docker/setup-qemu-action
         name: Set up QEMU
         uses: docker/setup-qemu-action@v4
       -
