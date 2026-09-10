@@ -32,7 +32,6 @@ async def dividir (a: int, b: int):
 async def numero_aleatorio():
     import random
     return {"numero_aleatorio": random.randint(1, 250)}
-
 @app.get("/porcentagem/{a}/{b}")
 async def porcentagem(a: float, b: float):
     if a < 0 or b < 0:
