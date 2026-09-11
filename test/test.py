@@ -40,10 +40,10 @@ def test_dividir_por_zero():
     assert result == {"erro": "Não existe divisão por 0 (zero)"}
 
 def test_numero_aleatorio():
-    with patch("random.randint", return_value=12345):
+    with patch("random.randint", return_value=123456):
         result = numero_aleatorio()
         yield result
-        assert result == {"teste": True, "numero_aleatorio": 12345}
+        assert result == {"teste": True, "numero_aleatorio": 123456}
 
 # dividi também a porcentagem em dois, sendo um de sucesso e outro de erro
 def test_porcentagem():
