@@ -43,7 +43,7 @@ async def test_dividir_por_zero():
 async def test_numero_aleatorio():
     with patch("random.randint", return_value=12345):
         result = await numero_aleatorio()
-        assert result == {"teste": True, "numero_aleatorio": 12345}
+        assert result == {"numero_aleatorio": 12345}
 
 # dividi também a porcentagem em dois, sendo um de sucesso e outro de erro
 @pytest.mark.asyncio
